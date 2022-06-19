@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>ltg</title>
     <link rel="icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <nav id="caja-nav">
@@ -22,8 +23,12 @@
             </div>
     </nav>
 
-    <div ><img  id="cofre" src="foto ender1.png" >
-    <img id="cofre-2" src="cofre ender.gif" ></div>
+    <div onmouseleave="cerrarCofre()" onmouseover="abrirCofre()"  id="cofres">
+        <img id="cofreimg" src="/cofreender.png" >
+        <img id="cofre-abierto" src="/cofreenderopen.gif" >
+        <img  id="cofre-cerrado" src="/cofreenderclosed.gif" >
+        <img class="ease-in" src="/manzana.gif" alt="" id="manzana">
+</div>
 
     <div class="cubo">
         <div class="face top"></div>
@@ -33,5 +38,30 @@
         <div class="face front"></div>
         <div class="face back"></div>
     </div>
+
+
+
+<script>
+        var cofreopen=document.getElementById("cofre-abierto");
+        var cofreclosed=document.getElementById("cofre-cerrado");
+        var manzana=document.getElementById("manzana");
+
+        function abrirCofre(){
+            cofreimg.style.display="none";
+            cofreopen.style.display="block";
+            cofreclosed.style.display="none"
+            manzana.style.opacity="100"
+        }
+        function cerrarCofre(){
+            cofreclosed.style.display="block"
+            cofreopen.style.display="none";
+            manzana.style.opacity="0"
+        }
+
+</script>
+
+
+
+
 </body>
 </html>
