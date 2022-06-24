@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <title>ltg</title>
-    <link rel="icon" href="logo.png">
+    <title>LTG</title>
+        <link rel="icon" href="/Perrito.gif">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -23,13 +23,38 @@
             </div>
     </nav>
 
-    <div onmouseleave="cerrarCofre()" onmouseover="abrirCofre()"  id="cofres">
-        <img id="cofreimg" src="/cofreender.png" >
-        <img id="cofre-abierto" src="/cofreenderopen.gif" >
-        <img  id="cofre-cerrado" src="/cofreenderclosed.gif" >
-        <img class="ease-in" src="/manzana.gif" alt="" id="manzana">
-</div>
 
+
+
+<!--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((COFRE-ENDER ))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+    <img src="cofreenderclosed.gif" id="cofre-1" onmouseenter="miFuncion()"  onmouseleave="miFuncion()">
+
+    <script type="text/javascript">
+    
+    var cofre = "cofre";
+    
+    function miFuncion()
+    {
+        var imagen = document.getElementById("cofre-1");
+    
+    
+        if (cofre == "cofre"){
+            imagen.src = "cofreenderopen.gif";
+            cofre = "cofre-open";
+        }
+        else{
+            imagen.src = "cofreenderclosed.gif";
+            cofre = "cofre";
+        }
+        
+    }
+    </script>
+<!--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((()))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))-->
+
+
+
+
+<!--((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((CUBO))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
     <div class="cubo">
         <div class="face top"></div>
         <div class="face bottom"></div>
@@ -38,27 +63,10 @@
         <div class="face front"></div>
         <div class="face back"></div>
     </div>
+(((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))-->
 
 
 
-<script>
-        var cofreopen=document.getElementById("cofre-abierto");
-        var cofreclosed=document.getElementById("cofre-cerrado");
-        var manzana=document.getElementById("manzana");
-
-        function abrirCofre(){
-            cofreimg.style.display="none";
-            cofreopen.style.display="block";
-            cofreclosed.style.display="none"
-            manzana.style.opacity="100"
-        }
-        function cerrarCofre(){
-            cofreclosed.style.display="block"
-            cofreopen.style.display="none";
-            manzana.style.opacity="0"
-        }
-
-</script>
 
 
 
